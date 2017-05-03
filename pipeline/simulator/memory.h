@@ -11,7 +11,6 @@
 
 FILE *iimage, *dimage;
 unsigned char *iBuffer, *dBuffer;
-int PC_line;
 
 //Memory
 unsigned char iMem[MEM_SIZE];
