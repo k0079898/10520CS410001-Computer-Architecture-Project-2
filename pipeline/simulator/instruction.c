@@ -3,10 +3,10 @@
 void getInstruction()
 {
     for(int i=0; i<4; i++) IF_ID.inst.inst = (IF_ID.inst.inst<<8) + (unsigned char)iMem[IF_ID.PC+i];
-    decodeIF();
+    decodeInstruction();
 }
 
-void decodeIF()
+void decodeInstruction()
 {
     IF_ID.inst.opcode = IF_ID.inst.inst >> 26;
     IF_ID.inst.rs = IF_ID.inst.inst << 6 >> 27;
@@ -183,7 +183,6 @@ void decodeIF()
     {
         if (IF_ID.inst.rt == 0 && IF_ID.inst.rd == 0 && IF_ID.inst.C == 0)
         {
-            memset(&IF_ID.inst, 0, sizeof(instruct));
             strcpy(IF_ID.inst.name, "NOP");
         }
     }

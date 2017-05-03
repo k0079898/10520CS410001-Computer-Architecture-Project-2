@@ -2,8 +2,8 @@
 #define pipereg_h
 
 #include <stdio.h>
+#include <string.h>
 #include "instruction.h"
-#include "regfile.h"
 
 typedef struct _instruction {
   unsigned int inst;
@@ -58,12 +58,12 @@ typedef struct prevDMtoWB {
     unsigned int result;
 } prevDMtoWB;
 
-IFtoID      IF_ID;
-IDtoEX      ID_EX;
-EXtoDM      EX_DM;
-DMtoWB      DM_WB;
-prevDMtoWB  prevDM_WB;
+IFtoID      IF_ID;      //IF/ID pipeline
+IDtoEX      ID_EX;      //ID/EX pipeline
+EXtoDM      EX_DM;      //EX/EM pipeline
+DMtoWB      DM_WB;      //DM/WB pipeline
+prevDMtoWB  prevDM_WB;  //The previous DM/WB pipeline
 
-void initPipeReg();
+void initPipeReg();     //Initial the pipeline to "NOP"
 
 #endif

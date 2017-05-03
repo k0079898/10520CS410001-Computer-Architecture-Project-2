@@ -4,10 +4,9 @@
 #include <stdio.h>
 #include <string.h>
 #include "memory.h"
-#include "regfile.h"
 #include "pipereg.h"
 
-void getInstruction();
-void decodeInstruction();
+void getInstruction();     //To get the PC instrction
+void decodeInstruction();  //Decode the instrction
 
 #endif
