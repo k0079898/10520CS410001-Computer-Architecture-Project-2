@@ -1,3 +1,4 @@
+# 10520CS410001-Computer-Architecture-Project-2
 # archiTA content
 As same as project1, this folder includes golden simulator and open testcase
 
